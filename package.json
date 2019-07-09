@@ -1,0 +1,65 @@
+{
+  "name": "serverless-cli",
+  "version": "1.0.0",
+  "description": "A command line interface to easily build/modify projects which use the serverless framework.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.0"
+  },
+  "engineStrict": true,
+  "preferGlobal": true,
+  "scripts": {
+    "lint": "eslint . --cache",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
+    "prettify": "prettier --write --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
+    "test": "jest --passWithNoTests",
+    "test-ci": "npm run prettify && npm run lint:fix && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:rguerra712/serverless-cli.git"
+  },
+  "author": "R. Stephen Guerra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com:rguerra712/serverless-cli/issues"
+  },
+  "homepage": "https://github.com:rguerra712/serverless-cli#readme",
+  "eslintConfig": {
+    "extends": "@serverless/eslint-config/node",
+    "root": true
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "(\\.|/)(tests)\\.js$",
+    "useStderr": true
+  },
+  "keywords": [
+    "serverless cli",
+    "serverless tool",
+    "serverless command",
+    "serverless commandline",
+    "serverless api",
+    "cli",
+    "command line",
+    "command line interface",
+    "serverless",
+    "serverless framework",
+    "serverless applications",
+    "serverless modules",
+    "aws",
+    "amazon",
+    "amazon web services",
+    "azure",
+    "azure functions",
+    "google cloud functions"
+  ],
+  "devDependencies": {
+    "@serverless/eslint-config": "^1.0.1",
+    "eslint": "^6.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2"
+  }
+}
