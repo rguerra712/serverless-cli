@@ -2,7 +2,7 @@
   "name": "serverless-cli",
   "version": "1.0.0",
   "description": "A command line interface to easily build/modify projects which use the serverless framework.",
-  "main": "index.js",
+  "main": "./lib/sererless-cli.js",
   "engines": {
     "node": ">=6.0"
   },
@@ -14,7 +14,8 @@
     "prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
     "prettify": "prettier --write --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
     "test": "jest --passWithNoTests",
-    "test-ci": "npm run prettify && npm run lint:fix && npm run test"
+    "test-ci": "npm run prettify && npm run lint:fix && npm run test",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,10 @@
   "homepage": "https://github.com:rguerra712/serverless-cli#readme",
   "eslintConfig": {
     "extends": "@serverless/eslint-config/node",
-    "root": true
+    "root": true,
+    "rules": {
+      "no-console": "off"
+    }
   },
   "jest": {
     "testEnvironment": "node",
@@ -61,5 +65,8 @@
     "eslint-plugin-import": "^2.18.0",
     "jest": "^24.8.0",
     "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "commander": "^2.20.0"
   }
 }
