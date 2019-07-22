@@ -68,5 +68,11 @@
   },
   "dependencies": {
     "commander": "^2.20.0"
+  },
+  "contributors": [
+    "R. Stephen Guerra (https://github.com/rguerra712)"
+  ],
+  "peerDependencies": {
+    "serverless": ">= 1.39.0"
   }
 }
