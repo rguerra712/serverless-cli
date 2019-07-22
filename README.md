@@ -11,5 +11,5 @@ A command line interface for extending the existing [serverless framework](https
 ### Easier initialization of a serverless project
 ```
 serverless-cli create aws-nodejs -init # use template, then add package.json
-serverless plugins serverless-offline serverless-webpack # multiple plugins
+serverless-cli plugins serverless-offline serverless-webpack # multiple plugins
 ```
