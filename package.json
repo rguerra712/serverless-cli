@@ -1,7 +1,7 @@
 {
   "name": "serverless-cli",
   "version": "1.0.0",
-  "description": "A command line interface to easily build/modify projects which use the serverless framework.",
+  "description": "A command line interface extending the existing serverless framework to easily build/modify projects which use the serverless framework.",
   "main": "./lib/sererless-cli.js",
   "engines": {
     "node": ">=6.0"
